@@ -44,8 +44,7 @@ namespace WeatherPet
 
         public string getWeather()
         {
-            //Env.Load()
-            //string apiKey = Environment.GetEnvironmentVariable("WEATHER_API_KEY");
+            //TD Здесь вызов бд?
 
             HttpClient client = new HttpClient();
             List<CityJson> jsonArr = JsonSerializer.Deserialize<List<CityJson>>(client.GetStringAsync("http://api.openweathermap.org/geo/1.0/direct?q=Saint%20Petersburg,RU&appid=951990e2fc10826954f1e3360eccc8ca").Result);
