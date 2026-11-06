@@ -230,7 +230,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Wheather.cs" />
+    <Compile Include="CitiesDbQ.cs" />
+    <Compile Include="Weather.cs" />
+    <Compile Include="WeatherResponseJson.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

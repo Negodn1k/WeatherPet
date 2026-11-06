@@ -25,6 +25,9 @@ namespace WeatherPet
         {
             Env.Load();
             InitializeComponent();
+
+            WeatherPet.Weather wheather = new Weather();
+            weatherLabel.Content = wheather.getWeather();
         }
     }
 }
