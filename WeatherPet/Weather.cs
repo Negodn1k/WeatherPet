@@ -44,11 +44,9 @@ namespace WeatherPet
 
         public string getWeather()
         {
-            //Env.Load()
-            //string apiKey = Environment.GetEnvironmentVariable("WEATHER_API_KEY");
 
-            HttpClient client = new HttpClient();
-            List<CityJson> jsonArr = JsonSerializer.Deserialize<List<CityJson>>(client.GetStringAsync("http://api.openweathermap.org/geo/1.0/direct?q=Saint%20Petersburg,RU&appid=951990e2fc10826954f1e3360eccc8ca").Result);
+            HttpClient client = new HttpClient();                                                                                                                                   
+            List<CityJson> jsonArr = JsonSerializer.Deserialize<List<CityJson>>(client.GetStringAsync("http://api.openweathermap.org/geo/1.0/direct?q=Saint%20Petersburg,RU&appid=951990e2fc10826954f1e3360eccc8ca").Result);   //TD добавить выбор городов и динамическую строку
 
             CityJson jsonObj = jsonArr.FirstOrDefault();
             //https://api.openweathermap.org/data/2.5/weather?q=Saint%20Petersburg&appid=951990e2fc10826954f1e3360eccc8ca&units=metric&lang=ru
