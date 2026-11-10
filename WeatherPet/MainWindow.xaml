@@ -15,6 +15,10 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Label x:Name="weatherLabel" FontSize="20" Margin="20"/>
-        <ComboBox Width="200" Height="25" Grid.Column="2" VerticalAlignment="Top" Margin="20" HorizontalAlignment="Right" IsEnabled="False"/>
+        <StackPanel Grid.Column="1" Orientation="Horizontal">
+        <Label Content="Введите город" Margin="80,20,0,20" />
+        <TextBox Width="200" Height="25" VerticalAlignment="Top" Margin="0,20,20,20" HorizontalAlignment="Right" x:Name="ChooseCity"/>
+        </StackPanel>
+        <Button Grid.Column="1" Width="200" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="20" x:Name="Confirm" Click="Confirm_Click" Content="Проверить погоду"/>
     </Grid>
 </Window>

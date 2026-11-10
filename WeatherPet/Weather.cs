@@ -42,11 +42,11 @@ namespace WeatherPet
         //    public Double speed { set; get; }
         //}
 
-        public string getWeather()
+        public string getWeather(string city)
         {
 
             HttpClient client = new HttpClient();                                                                                                                                   
-            List<CityJson> jsonArr = JsonSerializer.Deserialize<List<CityJson>>(client.GetStringAsync("http://api.openweathermap.org/geo/1.0/direct?q=Saint%20Petersburg,RU&appid=951990e2fc10826954f1e3360eccc8ca").Result);   //TD добавить выбор городов и динамическую строку
+            List<CityJson> jsonArr = JsonSerializer.Deserialize<List<CityJson>>(client.GetStringAsync($"http://api.openweathermap.org/geo/1.0/direct?q={city},RU&appid=951990e2fc10826954f1e3360eccc8ca").Result);   //TD добавить выбор городов и динамическую строку
 
             CityJson jsonObj = jsonArr.FirstOrDefault();
             //https://api.openweathermap.org/data/2.5/weather?q=Saint%20Petersburg&appid=951990e2fc10826954f1e3360eccc8ca&units=metric&lang=ru

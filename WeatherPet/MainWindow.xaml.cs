@@ -25,9 +25,17 @@ namespace WeatherPet
         {
             Env.Load();
             InitializeComponent();
+        }
 
+        private void Confirm_Click(object sender, RoutedEventArgs e)
+        {
+            try { 
             WeatherPet.Weather wheather = new Weather();
-            weatherLabel.Content = wheather.getWeather();
+            weatherLabel.Content = wheather.getWeather(ChooseCity.Text);
+            } catch 
+            {
+                weatherLabel.Content = "Такого города не существует";
+            }
         }
     }
 }
